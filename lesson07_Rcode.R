@@ -23,6 +23,7 @@ load("help.Rdata")
 class(helpdata)
 str(helpdata)
 attributes(helpdata)
+names(helpdata)
 
 # This dataset has 453 observations and 88 vars
 # various r functions for getting data.frame
@@ -83,6 +84,8 @@ library(pastecs)
 pastecsout <- helpdata %>%
   select(age,pcs,mcs,cesd) %>%
   pastecs::stat.desc()
+
+pastecsout
 
 # this creates a data.frame
 # which can also be formatted into a table
